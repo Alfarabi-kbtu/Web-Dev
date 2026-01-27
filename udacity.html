@@ -1,0 +1,263 @@
+<!-- 1 HTML syntax-->
+
+opening tag -> <h1>  closing tag-> </h1>
+<title>Html structure</title>
+<h1>This is heading</h1>
+<p>This is paragraph</p>
+<span>This is span</span>
+
+<!--trees-->
+<div>this tag is used to group content together</div>
+<div>
+    <h1>here div is parent of heading</h1>
+</div>
+
+
+<!-- 2 HTML syntax problem set-->
+
+<!--button-->
+<button>simple button</button>
+<input type="button" value="input type button">
+<form>
+  <button type="submit">button in form</button>
+</form>
+<button class="my-btn">button with css</button>
+
+<style>
+  .my-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .my-btn:hover {
+    background-color: #45a049;
+  }
+</style>
+<a href="https://example.com">
+  <button>button with link</button>
+</a>
+
+<!--headers-->
+<h1>Main Title</h1>
+<h2>Section</h2>
+<h3>Subsection</h3>
+<h4>Small Heading</h4>
+<h5>Smaller</h5>
+<h6>Smallest</h6>
+
+<!--list-->
+<ul>unordered</ul>
+<ol>ordered</ol>
+<ul>
+  <li>Apple</li>
+  <li>Banana</li>
+</ul>
+
+<ol>
+  <li>First</li>
+  <li>Second</li>
+</ol>
+<a href="https://google.com">constructing link</a>
+
+<!--image-->
+<img src="http://somewebsite.com/image.jpg" alt="short description">
+The source attribute, src, is like the href of a link - it is the URL of the image you want to display. 
+For now, your images will need to be hosted online, which means that the URL will need to start with http:// or https://. 
+You'll learn about another way to set image source in the next exercise. 
+The alt attribute stands for "alternative description,"
+
+<!--path-->
+Path tells the browser where files are located
+external:
+<a href="http://labs.udacity.com/fend/example/hello-world.html">Hello, world!</a>
+local:
+<a href="/Users/cameron/Udacity/etc/labs/fend/example/hello-world.html"> Hello, world!</a>
+href is a path to file
+
+<!--figure-->
+<figure>
+  <img src="mountain.jpg" alt="Mountain">
+  <figcaption>A beautiful mountain</figcaption>
+</figure>
+figure groups images with captions
+
+<!--mockup to website-->
+example:
+<header>My Website</header>
+<main>
+  <p>Welcome to my site</p>
+</main>
+<footer>© 2026</footer>
+
+
+<!-- 3 CSS syntax-->
+ div{
+    text-align: right
+ }
+ this is the rulset
+ div is selector
+ text-align: right is declaration block
+ Selector: This is the part of the CSS that identifies which HTML elements will be styled.
+ Declaration Block: This is enclosed in curly braces and contains one or more declarations
+
+ <!-- this is html comment--> /* and this is css comment */
+
+ <!--Attributes and selectors-->
+ tag Selector
+ h1 {
+  color: green;
+}
+class attribute Selector
+.book-summary {
+  color: blue;
+}
+id attribute Selector
+#site-description {
+  color: red;
+}
+
+<!--css references-->
+font style for italicizing text 
+text-decoration for underlining text 
+text-transform for uppercasing text 
+font-weight for balding text 
+
+<!--developer tools-->
+To open Chrome DevTools, either right-click on any page element and select Inspect
+Alternatively, you can use the shortcuts:(opens in a new tab)
+
+Command + Option + i (Mac)
+Ctrl + Shift + i (Windows/Linux).
+
+<!--css units-->
+CSS units define size, spacing, and positioning
+Absolute Units (fixed size) They do not depend on screen size.
+div {
+  width: 200px;
+}
+Relative Units (responsive) They adapt to screen or parent element.
+p {
+  font-size: 1.2em;
+}
+h1 {
+  font-size: 2rem;
+}
+Percentage, Relative to parent element.
+img {
+  width: 50%;
+}
+Viewport-based
+section {
+  width: 100vw;
+  height: 50vh;
+}
+Special Units
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+
+<!--colors-->
+The CSS color property defines the text color for an HTML element:
+<h1 style="color:blue;">This is a heading</h1>
+<p style="color:red;">This is a paragraph.</p>
+color: #ff0000;   /* red */
+color: #00ff00;   /* green */
+color: #0000ff;   /* blue */
+color: rgb(255, 0, 0); red
+color: rgb(0, 255, 0); green
+color: rgb(0, 0, 255); blue
+
+
+<!-- 4 CSS syntax problem set-->
+
+<!--styling an image-->
+Resize an Image
+img {
+  width: 200px;
+  height: auto;
+}
+Make Image Responsive
+img {
+  max-width: 100%;
+  height: auto;
+}
+Add Border
+img {
+  border: 2px solid black;
+}
+Rounded Corners
+img {
+  border-radius: 10px;
+}
+circle image
+img {
+  border-radius: 50%;
+}
+center image
+img {
+  display: block;
+  margin: auto;
+}
+add shadow
+img {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+<!--styling font-->
+p {
+  font-family: Arial, sans-serif; type of font
+  font-size: 16px; size of font
+  font-weight: bold; bolding font
+}
+
+<!--writing selectors-->
+p { color: blue; }          /* element */
+#title { color: red; }     /* id */
+.text { color: green; }    /* class */
+
+#menu {
+  text-align: center;
+}
+
+.item {
+  color: red;
+}
+
+.picture {
+  border-radius: 5px;
+}
+
+.description {
+  font-style: italic;
+}
+
+<!--salck card workspace-->
+A card-style layout (like Slack UI).
+<div class="card">Message</div>
+.card {
+  padding: 15px;
+  border-radius: 8px;
+  background: #f4f4f4;
+}
+
+Applying styles to a complete card layout.
+.card {
+  width: 300px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+<!--stylesheet-->
+Connect HTML to CSS.
+<link rel="stylesheet" href="style.css">
+A stylesheet is a CSS file that controls page appearance.
+body {
+  background-color: lightgray;
+}
+
