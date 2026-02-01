@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="lab2task2style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <div class="content-wrapper">
+                <div class="logo">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="instagram-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#f09433;stop-opacity:1" />
+                                <stop offset="25%" style="stop-color:#e6683c;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:#dc2743;stop-opacity:1" />
+                                <stop offset="75%" style="stop-color:#cc2366;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#bc1888;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="8" y="8" width="44" height="44" rx="12" stroke="url(#instagram-gradient)" stroke-width="3" fill="none"/>
+                        <circle cx="30" cy="30" r="11" stroke="url(#instagram-gradient)" stroke-width="3" fill="none"/>
+                        <circle cx="45" cy="15" r="3" fill="url(#instagram-gradient)"/>
+                    </svg>
+                </div>
+                
+                <div class="headline">
+                    <h1>
+                        Посмотрите, какими<br>
+                        моментами из жизни<br>
+                        поделились ваши <span class="highlight">близкие<br>
+                        друзья</span>.
+                    </h1>
+                </div>
+
+                <div class="phone-mockup">
+                    <div class="mockup-images">
+                        <div class="phone-container phone-1">
+                            <div class="phone-frame">
+                                <div class="phone-content">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqrWVT-5USymwaygER66UJuTcgJi4ZgJkE3g&s" alt="Profile 1">
+                                    <div class="interaction heart-icon"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="phone-container phone-2">
+                            <div class="phone-frame">
+                                <div class="phone-content">
+                                    <img src="https://ru.qaz365.kz/cache/imagine/1200/uploads/news/2025/05/30/6839c5be15d81247722342.jpeg" alt="Profile 2">
+                                    <div class="story-indicators">
+                                        <div class="avatar avatar-1"></div>
+                                        <div class="avatar avatar-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="phone-container phone-3">
+                            <div class="phone-frame">
+                                <div class="phone-content">
+                                    <img src="https://yt3.googleusercontent.com/jG2PKe0v1az-UT4QXFqdtT1JorOZaipsjTh_nInBzx1F3GHqSXo95jK60AxYYFN_xTXduPb1HQ=s900-c-k-c0x00ffffff-no-rj" alt="Profile 3">
+                                    <div class="interaction like-icon"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="login-container">
+                <div class="login-box">
+                    <h2>Войти в Instagram</h2>
+                    
+                    <input type="text" class="input-field" placeholder="Имя пользователя, номер мобильного телефона или электронная...">
+                    
+                    <input type="password" class="input-field" placeholder="Пароль">
+                    
+                    <button class="login-btn">Войти</button>
+                    
+                    <div class="divider">
+                        <span>ИЛИ</span>
+                    </div>
+                    
+                    <button class="facebook-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="#385185">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                        Войти через Facebook
+                    </button>
+                    
+                    <a href="#" class="forgot-password">Забыли пароль?</a>
+                </div>
+                
+                <div class="signup-box">
+                    <p>У вас еще нет аккаунта? <a href="#">Создать новый аккаунт</a></p>
+                </div>
+                
+                <div class="meta-logo">
+                    от <strong>Meta</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Meta</a>
+            <a href="#">Информация</a>
+            <a href="#">Блог</a>
+            <a href="#">Вакансии</a>
+            <a href="#">Помощь</a>
+            <a href="#">API</a>
+            <a href="#">Конфиденциальность</a>
+            <a href="#">Условия</a>
+            <a href="#">Места</a>
+            <a href="#">Instagram Lite</a>
+            <a href="#">Meta Ai</a>
+            <a href="#">Threads</a>
+            <a href="#">Загрузка контактов и лица, не являющиеся пользователями</a>
+            <a href="#">Meta Verified</a>
+        </div>
+        <div class="footer-bottom">
+            <span>Русский</span>
+            <span>© 2026 Instagram from Meta</span>
+        </div>
+    </footer>
+</body>
+</html>

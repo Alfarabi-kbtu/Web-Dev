@@ -1,0 +1,617 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --github-dark: #24292f;
+    --github-gray: #57606a;
+    --github-light-gray: #6e7781;
+    --github-border: #d0d7de;
+    --github-bg: #ffffff;
+    --github-bg-light: #f6f8fa;
+    --github-blue: #0969da;
+    --github-blue-hover: #0860ca;
+    --github-green: #1a7f37;
+    --github-purple: #8250df;
+    --github-orange: #bf3800;
+    --text-primary: #1f2328;
+    --text-secondary: #656d76;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+    color: var(--text-primary);
+    background: var(--github-bg);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 80px 0 60px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--github-bg) 0%, var(--github-bg-light) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(9, 105, 218, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(130, 80, 223, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.hero-title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    color: var(--github-dark);
+    letter-spacing: -1.5px;
+    animation: fadeInUp 0.8s ease-out;
+    position: relative;
+}
+
+.hero-description {
+    font-size: 18px;
+    color: var(--text-secondary);
+    max-width: 760px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+    position: relative;
+}
+
+.cta-button {
+    background: var(--github-dark);
+    color: white;
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(36, 41, 47, 0.15);
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+    position: relative;
+}
+
+.cta-button:hover {
+    background: var(--github-gray);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(36, 41, 47, 0.25);
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: 60px 0 80px;
+    position: relative;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.pricing-card {
+    background: white;
+    border: 1px solid var(--github-border);
+    border-radius: 12px;
+    padding: 32px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: cardSlideIn 0.6s ease-out both;
+    box-shadow: 0 2px 8px rgba(31, 35, 40, 0.04);
+}
+
+.pricing-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.pricing-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.pricing-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(31, 35, 40, 0.12);
+    border-color: var(--github-blue);
+}
+
+.pricing-card-featured {
+    border: 2px solid var(--github-blue);
+    box-shadow: 0 8px 24px rgba(9, 105, 218, 0.15);
+}
+
+.pricing-card-featured:hover {
+    box-shadow: 0 16px 40px rgba(9, 105, 218, 0.25);
+}
+
+.recommended-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--github-blue);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(9, 105, 218, 0.3);
+}
+
+.card-header {
+    margin-bottom: 24px;
+}
+
+.tier-name {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--github-dark);
+    margin-bottom: 8px;
+}
+
+.tier-subtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.pricing-amount {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--github-border);
+}
+
+.currency {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.price {
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--github-dark);
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.period {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-left: 4px;
+}
+
+.per-user {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-left: 8px;
+}
+
+.tier-button {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 12px;
+    border: 1px solid transparent;
+}
+
+.tier-button-primary {
+    background: var(--github-dark);
+    color: white;
+    border: 1px solid var(--github-dark);
+}
+
+.tier-button-primary:hover {
+    background: var(--github-gray);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(36, 41, 47, 0.2);
+}
+
+.tier-button-secondary {
+    background: transparent;
+    color: var(--github-dark);
+    border: 1px solid var(--github-border);
+}
+
+.tier-button-secondary:hover {
+    background: var(--github-bg-light);
+    border-color: var(--github-gray);
+}
+
+.tier-button-outline {
+    background: white;
+    color: var(--github-dark);
+    border: 1px solid var(--github-border);
+}
+
+.tier-button-outline:hover {
+    background: var(--github-bg-light);
+    border-color: var(--github-gray);
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.features-list {
+    list-style: none;
+    margin-top: 24px;
+}
+
+.features-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    font-size: 14px;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--github-bg-light);
+}
+
+.features-list li:last-child {
+    border-bottom: none;
+}
+
+.check-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: var(--github-green);
+}
+
+.card-footer {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--github-border);
+}
+
+.featured-link {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--github-blue);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.featured-link:hover {
+    color: var(--github-blue-hover);
+}
+
+.addon-list {
+    list-style: none;
+}
+
+.addon-list li {
+    font-size: 13px;
+    color: var(--text-secondary);
+    padding: 6px 0;
+    padding-left: 16px;
+    position: relative;
+}
+
+.addon-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--github-blue);
+    font-weight: bold;
+}
+
+/* Add-ons Section */
+.addons-section {
+    padding: 80px 0;
+    background: var(--github-bg-light);
+    position: relative;
+}
+
+.addons-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--github-border) 50%, transparent);
+}
+
+.section-title {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--github-dark);
+    letter-spacing: -1px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.addons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.addon-card {
+    background: white;
+    border: 1px solid var(--github-border);
+    border-radius: 12px;
+    padding: 28px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    animation: addonFadeIn 0.6s ease-out both;
+}
+
+.addon-card:nth-child(1) { animation-delay: 0.1s; }
+.addon-card:nth-child(2) { animation-delay: 0.2s; }
+.addon-card:nth-child(3) { animation-delay: 0.3s; }
+.addon-card:nth-child(4) { animation-delay: 0.4s; }
+.addon-card:nth-child(5) { animation-delay: 0.5s; }
+.addon-card:nth-child(6) { animation-delay: 0.6s; }
+
+.addon-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: var(--github-blue);
+    transition: height 0.4s ease;
+}
+
+.addon-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(31, 35, 40, 0.12);
+    border-color: var(--github-blue);
+}
+
+.addon-card:hover::before {
+    height: 100%;
+}
+
+.addon-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.addon-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--github-dark);
+}
+
+.addon-badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    background: rgba(9, 105, 218, 0.1);
+    color: var(--github-blue);
+}
+
+.addon-badge-premium {
+    background: rgba(130, 80, 223, 0.1);
+    color: var(--github-purple);
+}
+
+.addon-badge-security {
+    background: rgba(26, 127, 55, 0.1);
+    color: var(--github-green);
+}
+
+.addon-badge-actions {
+    background: rgba(191, 56, 0, 0.1);
+    color: var(--github-orange);
+}
+
+.addon-badge-packages {
+    background: rgba(130, 80, 223, 0.1);
+    color: var(--github-purple);
+}
+
+.addon-badge-cloud {
+    background: rgba(9, 105, 218, 0.1);
+    color: var(--github-blue);
+}
+
+.addon-description {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 24px;
+    min-height: 60px;
+}
+
+.addon-pricing {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.addon-price {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--github-dark);
+}
+
+.addon-period {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.addon-button {
+    width: 100%;
+    padding: 10px 20px;
+    background: transparent;
+    color: var(--github-blue);
+    border: 1px solid var(--github-border);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.addon-button:hover {
+    background: var(--github-blue);
+    color: white;
+    border-color: var(--github-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(9, 105, 218, 0.2);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes addonFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 48px;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .pricing-card:hover {
+        transform: translateY(-4px);
+    }
+    
+    .addons-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .hero-description {
+        font-size: 16px;
+    }
+    
+    .section-title {
+        font-size: 32px;
+    }
+    
+    .addons-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-card {
+        padding: 24px;
+    }
+    
+    .addon-card {
+        padding: 20px;
+    }
+    
+    .price {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 60px 0 40px;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .cta-button {
+        width: 100%;
+        padding: 12px 24px;
+    }
+    
+    .pricing-card {
+        padding: 20px;
+    }
+    
+    .tier-name {
+        font-size: 24px;
+    }
+    
+    .price {
+        font-size: 40px;
+    }
+}
