@@ -1,0 +1,52 @@
+<div class="product-card">
+  <div class="carousel">
+    <button class="arrow left" (click)="prevImage()">&#8592;</button>
+    
+    <img [src]="product.images[currentImageIndex]" 
+         [alt]="product.name" 
+         class="product-image">
+    
+    <button class="arrow right" (click)="nextImage()">&#8594;</button>
+  </div>
+
+  <div class="thumbnails">
+    <img *ngFor="let img of product.images; let i = index"
+         [src]="img"
+         [alt]="product.name"
+         [class.active]="i === currentImageIndex"
+         (click)="selectImage(i)"
+         class="thumbnail">
+  </div>
+
+  <div class="product-info">
+    <h3>{{ product.name }}</h3>
+    <p class="description">{{ product.description }}</p>
+
+    <div class="rating">
+      <span *ngFor="let star of [1,2,3,4,5]">
+        {{ star <= product.rating ? '⭐' : '☆' }}
+      </span>
+      <span class="rating-number">{{ product.rating }}/5</span>
+    </div>
+
+    <div class="price">{{ product.price | number:'1.0-0' }} ₸</div>
+
+    <div class="actions">
+  <a [href]="product.link" target="_blank" class="btn-view">
+    Посмотреть на Kaspi
+  </a>
+  <button class="btn-share" (click)="shareWhatsApp()">
+    📱 WhatsApp
+  </button>
+  <button class="btn-telegram" (click)="shareTelegram()">
+    ✈️ Telegram
+  </button>
+  <button class="btn-like" (click)="like()">
+    ❤️ {{ product.likes }}
+  </button>
+  <button class="btn-delete" (click)="delete()">
+    🗑️ Удалить
+  </button>
+</div>
+  </div>
+</div>
